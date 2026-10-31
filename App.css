@@ -1,0 +1,161 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fb;
+  color: #171717;
+}
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 16px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.connection-badge {
+  padding: 7px 13px;
+  border-radius: 22px;
+  background: #e5e7eb;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 27px 0 20px;
+  color: #707070;
+  font-size: 16px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric-card {
+  min-height: 175px;
+  padding: 23px 19px;
+  background: #1e293b;
+  border-radius: 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-title {
+  margin: 0;
+  color: #a0aec0;
+  font-size: 16px;
+}
+
+.metric-value {
+  margin: 17px 0;
+  color: #f8fafc;
+  font-size: 37px;
+  font-weight: 700;
+}
+
+.metric-value.normal {
+  color: #16c765;
+}
+
+.metric-unit {
+  margin: 0;
+  color: #00c8e8;
+  font-size: 17px;
+}
+
+.metric-unit span {
+  color: #a0aec0;
+}
+
+.valve-panel {
+  margin-top: 19px;
+  padding: 25px 19px;
+  background: #1e293b;
+  border-radius: 19px;
+  color: #f8fafc;
+}
+
+.valve-panel h2 {
+  margin: 0 0 22px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.valve-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 38px;
+  color: #f8fafc;
+  font-size: 20px;
+}
+
+.valve-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.valve-badge.open {
+  background: #164b3a;
+  color: #16c765;
+}
+
+.valve-badge.closed {
+  background: #542b32;
+  color: #ff7777;
+}
+
+.valve-divider {
+  height: 1px;
+  margin: 21px 0;
+  background: #37465b;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 19px;
+  }
+
+  .connection-badge {
+    font-size: 11px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    min-height: 150px;
+  }
+
+  .metric-value {
+    font-size: 32px;
+  }
+}
